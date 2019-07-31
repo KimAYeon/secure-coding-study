@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.security</groupId>
+	<artifactId>session</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>security-study-spring-resource</name>
+	<description>spring boot oauth2 system</description>
+
+	<modules>
+		<module>security-study-spring-oauth2</module>
+		<module>security-study-spring-resource</module>
+  </modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
