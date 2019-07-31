@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.security.session.mapper.MenuMapper">
+
+	<select id="selectMenuDetail" parameterType="String" resultType="com.security.session.model.Menu">
+		SELECT * FROM menu WHERE path = #{path}
+	</select>
+	
+	<select id="selectMenuByAuth" parameterType="com.security.session.model.Menu" resultType="com.security.session.model.Menu">
+		SELECT 	* 
+		FROM 	menu 
+		WHERE 	path = #{path}
+			AND find_in_set(#{auth_id}, auth_id)
+	</select>
+	
+</mapper>
